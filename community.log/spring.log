@@ -1,0 +1,55 @@
+2023-04-03 11:22:03.498  INFO 20184 --- [restartedMain] c.n.community.CommunityApplication       : Starting CommunityApplication using Java 1.8.0_291 on LAPTOP-A0O3GJ1T with PID 20184 (D:\Master\JavaProject\community1\target\classes started by Lenovo in D:\Master\JavaProject\community1)
+2023-04-03 11:22:03.502 DEBUG 20184 --- [restartedMain] c.n.community.CommunityApplication       : Running with Spring Boot v2.7.5, Spring v5.3.23
+2023-04-03 11:22:03.502  INFO 20184 --- [restartedMain] c.n.community.CommunityApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-04-03 11:22:03.540  INFO 20184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-03 11:22:03.540  INFO 20184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-03 11:22:04.419  INFO 20184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-04-03 11:22:04.428  INFO 20184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-03 11:22:04.428  INFO 20184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-04-03 11:22:04.509  INFO 20184 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-04-03 11:22:04.509  INFO 20184 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 969 ms
+2023-04-03 11:22:04.939  INFO 20184 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-04-03 11:22:05.080  INFO 20184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-03 11:22:05.119  INFO 20184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/community'
+2023-04-03 11:22:05.135  INFO 20184 --- [restartedMain] c.n.community.CommunityApplication       : Started CommunityApplication in 2.083 seconds (JVM running for 3.255)
+2023-04-03 11:22:36.934  INFO 20184 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-03 11:22:36.934  INFO 20184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-03 11:22:36.935  INFO 20184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-04-03 11:22:36.988  INFO 20184 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : defaultDataSource - Starting...
+2023-04-03 11:22:37.442  INFO 20184 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : defaultDataSource - Start completed.
+2023-04-03 11:22:37.447 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.c.d.D.selectDiscussPostRows          : ==>  Preparing: select count(id) from discuss_post where status != 2
+2023-04-03 11:22:37.463 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.c.d.D.selectDiscussPostRows          : ==> Parameters: 
+2023-04-03 11:22:37.479 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.c.d.D.selectDiscussPostRows          : <==      Total: 1
+2023-04-03 11:22:37.484 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.c.d.D.selectDiscussPosts             : ==>  Preparing: select id, user_id, title, content, type, status, create_time, comment_count, score from discuss_post where status != 2 order by type desc, create_time desc limit ?, ?
+2023-04-03 11:22:37.484 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.c.d.D.selectDiscussPosts             : ==> Parameters: 0(Integer), 10(Integer)
+2023-04-03 11:22:37.490 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.c.d.D.selectDiscussPosts             : <==      Total: 10
+2023-04-03 11:22:37.491 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.491 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 11(Integer)
+2023-04-03 11:22:37.493 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.494 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.494 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 111(Integer)
+2023-04-03 11:22:37.497 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.497 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.498 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 149(Integer)
+2023-04-03 11:22:37.499 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.499 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.500 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 149(Integer)
+2023-04-03 11:22:37.501 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.501 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.501 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 149(Integer)
+2023-04-03 11:22:37.502 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.503 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.503 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 146(Integer)
+2023-04-03 11:22:37.504 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.505 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.505 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 145(Integer)
+2023-04-03 11:22:37.506 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.507 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.507 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 138(Integer)
+2023-04-03 11:22:37.508 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.509 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.509 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 138(Integer)
+2023-04-03 11:22:37.510 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
+2023-04-03 11:22:37.511 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==>  Preparing: select id, username, password, salt, email, type, status, activation_code, header_url, create_time from user where id = ?
+2023-04-03 11:22:37.511 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : ==> Parameters: 103(Integer)
+2023-04-03 11:22:37.514 DEBUG 20184 --- [http-nio-8080-exec-1] c.n.community.dao.UserMapper.selectById  : <==      Total: 1
